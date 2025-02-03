@@ -3,7 +3,7 @@ from dvc.api import DVCFileSystem
 
 def process_large_csv():
     # Initialize DVCFileSystem with GCS URL
-    fs = DVCFileSystem(url='gs://dvc-demo-remote')
+    fs = DVCFileSystem(remote="myremote")
 
     # Open the large CSV file using DVCFileSystem
     with fs.open('large_file.csv', 'rb') as f:
